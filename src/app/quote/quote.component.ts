@@ -16,6 +16,12 @@ export class QuoteComponent implements OnInit {
     new Quote(5,"Daisy Arusey","The art challenges the technology, and the technology inspires the art.", "John Lasseter")
   ]
 
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    this.quotes.push(quote)
+  }
+
   constructor() { }
 
   ngOnInit() {}
