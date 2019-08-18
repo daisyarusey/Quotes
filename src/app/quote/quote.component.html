@@ -6,7 +6,7 @@
   <div *ngFor='let quote of quotes'>
       <strong><p>{{quote.name}}</p></strong>
       <p>{{quote.theQuote}}</p>
-      <p>Submitted on {{quote.postDate}}</p>
+      <p>Submitted on {{quote.postDate|date}}</p>
   </div>
   
 </div>
