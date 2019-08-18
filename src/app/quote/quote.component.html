@@ -1,5 +1,8 @@
 <h1 class="text-center">Tech Quotes</h1>
 <div class="container">
+  <div>
+    <app-quote-form></app-quote-form>
+  </div>
   <div *ngFor='let quote of quotes'>
       <strong><p>{{quote.name}}</p></strong>
       <p>{{quote.theQuote}}</p>
