@@ -1,12 +1,12 @@
 .body{
   background-color:rgba(41, 146, 178, 0.5) ;
   padding: 20px;
-  
-  
 }
+
 #quotes{
   padding: 10px;
   width: 70%;
   box-shadow: 0 0 5px rgb(255, 255, 255);
   position: relative;
 }
+

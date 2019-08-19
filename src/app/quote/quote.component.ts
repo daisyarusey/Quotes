@@ -13,7 +13,7 @@ export class QuoteComponent implements OnInit {
     new Quote(2, "Daisy Arusey", "Humanity is acquiring all the right technology for all the wrong reasons.", "R. Buckminster Fuller", new Date(2018,6,7),0,0),
     new Quote(3, "Daisy Arusey", "Technology is a word that describes something that doesn’t work yet.", "Douglas Adams", new Date(2018,1,12),0,0),
     new Quote(4, "Daisy Arusey", "One machine can do the work of fifty ordinary men. No machine can do the work of one extraordinary man.", "Elbert Hubbard", new Date(2018,11,7),0,0),
-    new Quote(5,"Daisy Arusey","The art challenges the technology, and the technology inspires the art.", "John Lasseter", new Date(2018,10,7),0,0)
+    new Quote(5,"Daisy Arusey","The art challenges the technology, and the technology inspires the art.", "John Lasseter", new Date(2018,10,7),0,0),
   ]
 
   addNewQuote(quote){
