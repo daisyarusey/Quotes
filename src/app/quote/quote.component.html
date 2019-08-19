@@ -3,10 +3,11 @@
   <div>
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   </div>
-  <div *ngFor='let quote of quotes'>
-      <strong><p>{{quote.name}}</p></strong>
+  <div *ngFor='let quote of quotes; let i=index'>
       <p>{{quote.theQuote}}</p>
-      <p>Submitted on {{quote.postDate|date}}</p>
+      <em><p>{{quote.author}}</p></em> 
+      <button (click) = 'toggleDetails(i)'class="btn btn-success">Description</button>
+      <app-quote-detail *ngIf ='quote.showDescription' [quote] = 'quote'></app-quote-detail>
   </div>
   
 </div>
