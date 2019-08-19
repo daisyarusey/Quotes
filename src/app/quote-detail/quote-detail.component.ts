@@ -16,12 +16,12 @@ export class QuoteDetailComponent implements OnInit {
     
   }
 
-  positive(i){
-    this.quote[i].upvotes +=1;
-  }
-  negative(i){
-       this.quote[i].downvotes +=1;
-     }
+  // positive(i){
+  //   this.quote[i].upvotes +=1;
+  // }
+  // negative(i){
+  //      this.quote[i].downvotes +=1;
+  //    }
   constructor() { }
 
   ngOnInit() {
