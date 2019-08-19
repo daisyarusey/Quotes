@@ -1,13 +1,23 @@
-<h1 class="text-center">Tech Quotes</h1>
+<div class="body d-block mx-auto">
+  <h1 class="text-center">Tech Quotes</h1>
 <div class="container">
   <div>
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   </div>
+  <div>
+    <h2>Quotes</h2>
   <div *ngFor='let quote of quotes; let i=index'>
+    <div id="quotes" class="mt-5">
       <p>{{quote.theQuote}}</p>
       <em><p>{{quote.author}}</p></em> 
       <button (click) = 'toggleDetails(i)'class="btn btn-success">Description</button>
-      <app-quote-detail *ngIf ='quote.showDescription' [quote] = 'quote'></app-quote-detail>
+      <app-quote-detail *ngIf ='quote.showDescription' [quote] = 'quote'(isComplete) ='quoteDelete($event,i)'></app-quote-detail>
+    </div>
   </div>
   
+      
+  </div>
+  
+</div>
+
 </div>

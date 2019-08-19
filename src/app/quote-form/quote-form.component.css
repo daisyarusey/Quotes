@@ -1,0 +1,19 @@
+form{
+  background-position: relative;
+    width: 50% !important;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    background-color: rgba(97, 235, 205, 0.7);
+    padding: 20px;
+    border-radius: 50px;
+
+  }
+  form:hover{
+    box-shadow: 0 0 10px black;
+  }
+  p{
+    font-family: 'Montserrat Alternates', sans-serif;
+  }
+  label{
+    font-family: 'Roboto Slab', serif;
+  }

@@ -1,2 +1,6 @@
 <p>Posted on {{quote.postDate|date}} <br> By {{quote.name}}</p> 
-<button class=" btn btn-danger">Delete</button>
+<p>Posted {{quote.completeDate | dateCount}} days ago </p>
+<button class=" btn btn-danger" (click)='quoteDelete(true)' >Delete</button><br>
+<button class="mt-2" (click)='positive(i)'>like</button>
+<button class="mt-2" (click)='negative(i)'>unlike</button>
+<p><strong>upVotes:</strong>{{quote.upvotes}} <strong>downVotes:</strong> {{quote.downvotes}}</p>
