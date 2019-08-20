@@ -1,7 +1,7 @@
-<p>Posted on {{quote.postDate|date}} <br> By {{quote.name}}</p> 
-<p>Posted {{quote.postDate | dateCount}} days ago </p>
-<button class=" btn btn-danger" (click)='quoteDelete(true)' >Delete</button><br>
-<button class="mt-2 mr-2" type="button" id="like" (click)="likeButtonClick()">like</button>
-<button class="mt-2" type="button" id="dislike" (click)="dislikeButtonClick()">unlike</button>
-<p><strong>Likes:</strong>{{numberOfLikes}} </p>
-<p><strong>Dislikes:</strong>{{numberOfDislikes}} </p>
+<p>Posted on {{quote.postDate|date}} <br> By {{quote.name}} <br>Posted {{quote.postDate | dateCount}} days ago</p> 
+<button class=" btn btn-danger mb-3" (click)='quoteDelete(true)' >Delete</button>
+<div>
+<i class="fa fa-thumbs-up" aria-hidden="true" (click)="likeButtonClick()"></i>
+<i class="fa fa-thumbs-down ml-5" aria-hidden="true" (click)="dislikeButtonClick()"></i>
+<p><strong>Likes:</strong>{{numberOfLikes}} <span><strong>Dislikes:</strong>{{numberOfDislikes}}</span></p>
+</div>

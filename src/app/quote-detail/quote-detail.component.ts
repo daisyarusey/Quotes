@@ -29,16 +29,6 @@ export class QuoteDetailComponent implements OnInit {
     this.numberOfDislikes++;
   }
 
-  // upVotes = 0;
-  // downVotes =0;
-  
-  // like() {
-  //   this.upVotes++;
-  // }
-
-  // dislike() {
-  //   this.downVotes++;
-  // }
   constructor() { }
 
   ngOnInit() {

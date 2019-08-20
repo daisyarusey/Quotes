@@ -1,26 +1,25 @@
 <div class="body">
-  <h1 class="text-center">Tech Quotes</h1>
-<div class="container">
-  <div class="row pt-4">
-      <div class="col-md-5">
-        <h2>Importance of Quotes</h2>
-        <p id="fontincrease">Quoting effectively is important because the right quotation <br> presented properly can add spice, interest, thought, effectivenes, support, and respect to your writing. Quoting ineffectively makes your writing look like an amateur attempt padded by random comments from strangers.</p>
+  <h1 class="text-center" id="sticky">Tech Quotes</h1>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-7">
+        <h2 class="text-center">Quotes</h2>
+        <div *ngFor='let quote of quotes; let i=index'>
+          <div id="quotes" class="mt-5">
+            <p>{{quote.theQuote}}</p>
+            <em>
+              <p>{{quote.author}}</p>
+            </em>
+            <button (click)='toggleDetails(i)' class="btn btn-success">Description</button>
+            <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='quoteDelete($event,i)'>
+            </app-quote-detail>
+          </div>
+        </div>
       </div>
-      <div class="col-md-2"></div>
-    <div class="col-md-5">
-    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-  </div>
-  </div>
-  <div>
-      <h2 class="text-center">Quotes</h2>
-    <div *ngFor='let quote of quotes; let i=index'>
-      <div id="quotes" class="mt-5">
-        <p>{{quote.theQuote}}</p>
-        <em><p>{{quote.author}}</p></em> 
-        <button (click) = 'toggleDetails(i)'class="btn btn-success">Description</button>
-        <app-quote-detail *ngIf ='quote.showDescription' [quote] = 'quote'(isComplete) ='quoteDelete($event,i)'></app-quote-detail>
+      <div class="col-md-5" id="">
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
       </div>
     </div>
   </div>
-</div>
 </div>
