@@ -17,6 +17,7 @@ export class QuoteDetailComponent implements OnInit {
   }
 
   numberOfLikes : number=0;
+  numberOfDislikes =0;
 
   likeButtonClick() {
     this.numberOfLikes++;
@@ -25,7 +26,7 @@ export class QuoteDetailComponent implements OnInit {
   
 
   dislikeButtonClick() {
-    this.numberOfLikes--;
+    this.numberOfDislikes++;
   }
 
   // upVotes = 0;
