@@ -16,19 +16,6 @@ export class QuoteDetailComponent implements OnInit {
     
   }
 
-  numberOfLikes : number=0;
-  numberOfDislikes =0;
-
-  likeButtonClick() {
-    this.numberOfLikes++;
-  }
-
-  
-
-  dislikeButtonClick() {
-    this.numberOfDislikes++;
-  }
-
   constructor() { }
 
   ngOnInit() {

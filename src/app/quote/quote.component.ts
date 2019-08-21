@@ -34,6 +34,34 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
+
+  numberOfLikes : number=0;
+  numberOfDislikes =0;
+
+  likeButtonClick(i) {
+    this.quotes[i].numberOfLikes++;
+  }
+
+  
+
+  dislikeButtonClick(i) {
+    this.quotes[i].numberOfDislikes++;
+  }
+
+  preNum:number
+  lastNum:number
+  counter:number
+
+  highestUpvote(){
+    this.preNum = 0
+    this.lastNum = 0
+
+    for(this.counter=0 ; this.counter < this.quotes.length; this.counter++) {
+      this.lastNum = this.quotes[this.counter].numberOfLikes;
+      if(this.lastNum > this.preNum){this.preNum = this.lastNum}
+    }
+    return  this.preNum
+  }
   
 
   constructor() { }

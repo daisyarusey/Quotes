@@ -7,10 +7,21 @@
         <h2 class="text-center">Quotes</h2>
         <div *ngFor='let quote of quotes; let i=index'>
           <div id="quotes" class="mt-5">
-            <p>{{quote.theQuote}}</p>
+            <p appHighlight *ngIf="highestUpvote()===quote.numberOfLikes && quote.numberOfLikes>0">
+              {{quote.theQuote}}
+            </p>
+            <p *ngIf="highestUpvote()!==quote.numberOfLikes || quote.numberOfLikes===0">{{quote.theQuote}}
+            </p>
+
             <em>
               <p>{{quote.author}}</p>
             </em>
+            <div>
+                <i class="fa fa-thumbs-up" aria-hidden="true" (click)="likeButtonClick(i)"></i>
+                <i class="fa fa-thumbs-down ml-5" aria-hidden="true" (click)="dislikeButtonClick(i)"></i>
+                <p><strong>Likes:</strong>{{quote.numberOfLikes}} <span><strong>Dislikes:</strong>{{quote.numberOfDislikes}}</span></p>
+                </div>
+            
             <button (click)='toggleDetails(i)' class="btn btn-success">Description</button>
             <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='quoteDelete($event,i)'>
             </app-quote-detail>

@@ -1,7 +1,3 @@
 <p>Posted on {{quote.postDate|date}} <br> By {{quote.name}} <br>Posted {{quote.postDate | dateCount}} days ago</p> 
 <button class=" btn btn-danger mb-3" (click)='quoteDelete(true)' >Delete</button>
-<div>
-<i class="fa fa-thumbs-up" aria-hidden="true" (click)="likeButtonClick()"></i>
-<i class="fa fa-thumbs-down ml-5" aria-hidden="true" (click)="dislikeButtonClick()"></i>
-<p><strong>Likes:</strong>{{numberOfLikes}} <span><strong>Dislikes:</strong>{{numberOfDislikes}}</span></p>
-</div>
+

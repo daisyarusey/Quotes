@@ -1,10 +1,11 @@
 form{
   background-position: relative;
-    margin-bottom: 10%;
+    
     background-color: rgba(0,0,0,0.9);
     padding: 20px;
     border-radius: 50px;
     box-shadow: 0 0 5px rgb(255, 255, 255);
+    
 
   }
 
@@ -13,4 +14,7 @@ form{
   }
   label{
     font-family: 'Roboto Slab', serif;
+  }
+  h2{
+    margin-bottom: 10%;
   }
