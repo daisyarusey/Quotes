@@ -1,9 +1,5 @@
 .body{
   padding: 20px;
-  background-image: url(src/assets/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
 }
 
 #quotes{
